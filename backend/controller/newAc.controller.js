@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt'
 export const createAccount=async(req,res)=>{
     const newUser=req.body;
     
-    let existingUser=await userModel.findOne({email:newUser.email})
+    let existingUser=await userModel.findOne({Email:newUser.email})
     if(existingUser){
         res.status(400).send("The user already exist with the same email Id");
     }
