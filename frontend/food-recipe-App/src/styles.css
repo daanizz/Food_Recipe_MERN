@@ -1,0 +1,29 @@
+/* src/styles.css */
+nav {
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.recipe-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 200px;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+}

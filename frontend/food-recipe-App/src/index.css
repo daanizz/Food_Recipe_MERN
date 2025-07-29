@@ -1,0 +1,28 @@
+.footer{
+    color: grey;
+    height: 200px;
+    background-color: black;
+}
+
+.logo{
+    font-family: 'Times New Roman';
+    color: blueviolet;
+}
+
+.navbard{
+    background-color:rosybrown ;
+    padding: auto;
+    margin: 0px;
+    height:60px;
+}
+
+.nav-links{
+    margin: 10px;
+    display: block;
+}
+
+.nav-links , .navbar, .logo{
+    padding: 23px;
+    margin: 32px;
+    display:inline ;
+}
