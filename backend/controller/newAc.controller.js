@@ -1,4 +1,4 @@
-import userModel from "../Model/user.model";
+import userModel from "../Model/user.model.js";
 import bcrypt from 'bcrypt'
 
 export const createAccount=async(req,res)=>{
@@ -10,13 +10,11 @@ export const createAccount=async(req,res)=>{
     }
     else{
         try {
-            const salt=await bcrypt.genSalt(10)
-            const password=await bcrypt.hash(newUser.password,salt)
             const user=new userModel({
                 Name:newUser.name,
                 Role:"user",
                 Email:newUser.email,
-                Hashpwd:password
+                Hashpwd:newUser.password
             })
             await user.save()
             return res.status(201).send("User created")

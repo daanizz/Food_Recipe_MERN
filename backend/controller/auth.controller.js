@@ -1,4 +1,4 @@
-import userModel from "../Model/user.model";
+import userModel from "../Model/user.model.js";
 import bcrypt from 'bcrypt';
 
 export const Authenitcate=async(req,res)=>{

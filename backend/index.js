@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import mongoConnection from "./config/db.js";
 import recipeRoute from "./routes/recipe.route.js"
 import authRoute from "./routes/auth.user.js"
-import { Session } from "session";
+import  Session  from "express-session";
 import Cors from "cors"
 
 

@@ -26,9 +26,9 @@ const userModel=new mongoose.Schema(
 
 userModel.pre('save',async function(){
     const user=this
-    if(this.isModified('password')) return;
+    if(!this.isModified('Hashpwd')) return;
     const salt=await bcrypt.genSalt();
-    this.password=await bcrypt.hash(this.password,salt)
+    this.Hashpwd=await bcrypt.hash(this.Hashpwd,salt)
 })
 
 export default mongoose.model("User",userModel)
